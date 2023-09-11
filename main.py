@@ -1,0 +1,42 @@
+import datetime
+import time
+import pyautogui
+
+try:
+    today1 = datetime.date.today()
+    time.sleep(2)
+    pyautogui.keyDown('winleft')
+    pyautogui.press('d')
+    pyautogui.keyUp('winright')
+    time.sleep(1)
+    pyautogui.doubleClick(50, 150)
+    time.sleep(1)
+    pyautogui.click(80, 85)
+    time.sleep(1)
+    pyautogui.click(1620,155)
+    time.sleep(1)
+    pyautogui.moveTo(1048, 590)
+    time.sleep(1)
+    pyautogui.dragTo(1120, 590, 0.5, button='left')
+    time.sleep(1)
+    pyautogui.moveTo(860, 671)
+    time.sleep(1)
+    pyautogui.dragTo(860, 750, 0.5, button='left')
+    time.sleep(1)
+    pyautogui.moveTo(910, 415)
+    time.sleep(1)
+    pyautogui.dragTo(940, 415, 0.5, button='left')
+    time.sleep(1)
+    pyautogui.moveTo(1041, 415)
+    time.sleep(1)
+    pyautogui.dragTo(1071, 415, 0.5, button='left')
+    time.sleep(1)
+    screenshot = pyautogui.screenshot()
+    screenshot.save(rf'C:\Users\Administrador\Documents\GNX-SCREENSHOT\screenshots\{datetime.datetime.now():%d-%m-%y}-GNX.png')
+    time.sleep(1)
+    pyautogui.click(1100, 350)
+    time.sleep(1)
+    pyautogui.click(1655, 1)
+
+except Exception as e:
+    print("Error:", e)
